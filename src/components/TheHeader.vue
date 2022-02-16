@@ -5,8 +5,8 @@
     </div>
     <nav>
       <ul>
-        <li>Items</li>
-        <li>Cart</li>
+        <li><router-link to="/items">Items</router-link></li>
+        <li><router-link to="/cart">Cart</router-link></li>
       </ul>
     </nav>
   </header>
@@ -16,4 +16,36 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(182, 157, 232);
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: blueviolet;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 2rem;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 12rem;
+  min-width: 2rem;
+  padding: 0;
+  list-style-type: none;
+}
+</style>

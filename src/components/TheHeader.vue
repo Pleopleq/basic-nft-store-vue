@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div>
+    <div class="logo">
       <h1>NFT STORE</h1>
     </div>
     <nav>
@@ -28,9 +28,19 @@ a:hover {
 
 header {
   display: flex;
+  height: 12vh;
   justify-content: space-around;
   background-color: blueviolet;
   color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > h1 {
+  margin: 0;
 }
 
 nav {

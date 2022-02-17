@@ -3,6 +3,10 @@ import TheShoppingCart from "./components/TheShoppingCart.vue";
 
 const routes = [
   {
+    path: "/",
+    redirect: "/items",
+  },
+  {
     path: "/items",
     component: TheItemList,
   },

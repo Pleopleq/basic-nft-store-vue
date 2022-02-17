@@ -1,7 +1,7 @@
 <template>
   <div class="card-content">
     <h2>{{ title }}</h2>
-    <img :src="img" width="240" alt="Borpa" />
+    <img :src="img" alt="Borpa" />
     <h3>{{ price }}</h3>
     <div>
       <button>Buy</button>
@@ -19,14 +19,17 @@ export default {
 .itemlist-title {
   text-align: center;
 }
+
 .card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 img {
   display: block;
-  width: 100%;
+  height: 264px;
+  width: 264px;
 }
 </style>

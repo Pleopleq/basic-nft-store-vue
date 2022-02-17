@@ -3,6 +3,7 @@
   <main class="main-view">
     <router-view></router-view>
   </main>
+  <footer></footer>
 </template>
 
 <script>
@@ -18,12 +19,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  font-family: sans-serif;
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-}
+
 .main-view {
   margin: 3rem;
-  height: 75vh;
+}
+footer {
+  height: 2rem;
+  background-color: red;
 }
 </style>

@@ -71,11 +71,11 @@ export default {
 <style scoped>
 .itemlist-list {
   display: grid;
-  gap: 22px;
-  grid-template-rows: 28rem;
   grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .itemlist-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -85,7 +85,7 @@ export default {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .itemlist-list {
     grid-template-columns: repeat(4, 1fr);
   }

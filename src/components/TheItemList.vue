@@ -2,9 +2,10 @@
   <div class="itemlist-title">
     <h1>NFTs for sale</h1>
   </div>
-  <section class="itemlist-list">
+  <section class="itemlist-list" @item-added="addItemToCart">
     <base-card v-for="nft of listOfNfts" :key="nft.id">
       <item-details
+        :id="nft.id"
         :title="nft.title"
         :price="nft.price"
         :img="nft.img"
@@ -17,53 +18,10 @@
 import ItemDetails from "./ItemDetails.vue";
 export default {
   components: { ItemDetails },
-  data() {
-    return {
-      listOfNfts: [
-        {
-          id: "a1",
-          title: "Borpa #01",
-          price: "0.5 ETH",
-          img: "https://i.kym-cdn.com/photos/images/facebook/002/143/871/68e.png",
-        },
-        {
-          id: "a2",
-          title: "Borpa #02",
-          price: "1.2 ETH",
-          img: "https://i.redd.it/zc0h1a4ofzt71.png",
-        },
-        {
-          id: "a3",
-          title: "Borpa #03",
-          price: "1.0 ETH",
-          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSksZ6IG11nlwGWelAqXBUIBzsTNNAjt2_67g&usqp=CAU",
-        },
-        {
-          id: "a3",
-          title: "Borpa #03",
-          price: "1.0 ETH",
-          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSksZ6IG11nlwGWelAqXBUIBzsTNNAjt2_67g&usqp=CAU",
-        },
-        {
-          id: "a3",
-          title: "Borpa #03",
-          price: "1.0 ETH",
-          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSksZ6IG11nlwGWelAqXBUIBzsTNNAjt2_67g&usqp=CAU",
-        },
-        {
-          id: "a3",
-          title: "Borpa #03",
-          price: "1.0 ETH",
-          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSksZ6IG11nlwGWelAqXBUIBzsTNNAjt2_67g&usqp=CAU",
-        },
-        {
-          id: "a3",
-          title: "Borpa #03",
-          price: "1.0 ETH",
-          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSksZ6IG11nlwGWelAqXBUIBzsTNNAjt2_67g&usqp=CAU",
-        },
-      ],
-    };
+  computed: {
+    listOfNfts() {
+      return this.$store.getters.listOfNfts;
+    },
   },
 };
 </script>

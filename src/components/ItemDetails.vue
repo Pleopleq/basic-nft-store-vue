@@ -31,7 +31,12 @@ export default {
         return (this.isInCart = !this.isInCart);
       }
       this.isInCart = !this.isInCart;
-      this.$emit("item-added", this.id);
+      this.$store.dispatch("addProductToCart", {
+        title: this.title,
+        img: this.img,
+        price: this.price,
+        id: this.id,
+      });
     },
   },
 };

@@ -2,7 +2,7 @@
   <div class="itemlist-title">
     <h1>NFTs for sale</h1>
   </div>
-  <section class="itemlist-list" @item-added="addItemToCart">
+  <section class="itemlist-list">
     <base-card v-for="nft of listOfNfts" :key="nft.id">
       <item-details
         :id="nft.id"
@@ -20,7 +20,7 @@ export default {
   components: { ItemDetails },
   computed: {
     listOfNfts() {
-      return this.$store.getters.listOfNfts;
+      return this.$store.state.listOfNfts;
     },
   },
 };

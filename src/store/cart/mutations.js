@@ -1,14 +1,7 @@
 export default {
   addProductToCart(state, productData) {
-    const productInCartIndex = state.cart.items.findIndex(
-      (ci) => ci.productId === productData.id
-    );
-    if (productInCartIndex >= 0) {
-      state.cart.items[productInCartIndex].qty++;
-    } else {
-      const newItem = { ...productData };
-      state.cart.items.push(newItem);
-    }
+    const newItem = { ...productData };
+    state.cart.items.push(newItem);
     state.cart.qty++;
     state.cart.total += productData.price;
   },

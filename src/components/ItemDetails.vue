@@ -4,7 +4,12 @@
     <img :src="img" alt="Borpa" />
     <h3>{{ price }}</h3>
     <div class="button-container">
-      <button @click="onAddToCart">{{ addToCartTextBtn }}</button>
+      <button @click="onAddToCart" v-if="!isInCart">
+        {{ addToCartTextBtn }}
+      </button>
+      <button @click="onDeleteFromCart" v-else>
+        {{ addToCartTextBtn }}
+      </button>
     </div>
   </div>
 </template>
@@ -27,9 +32,6 @@ export default {
   },
   methods: {
     onAddToCart() {
-      if (this.isInCart) {
-        return (this.isInCart = !this.isInCart);
-      }
       this.isInCart = !this.isInCart;
       this.$store.dispatch("addProductToCart", {
         title: this.title,
@@ -37,6 +39,10 @@ export default {
         price: this.price,
         id: this.id,
       });
+    },
+    onDeleteFromCart() {
+      this.isInCart = !this.isInCart;
+      this.$store.dispatch("removeProductFromCart", this.id);
     },
   },
 };

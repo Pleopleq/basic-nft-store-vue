@@ -1,8 +1,8 @@
 export default {
   cartProductList(state) {
-    return state.cartProductList;
+    return state.cart.items;
   },
   itemsInCart(state) {
-    return state.cartProductList.length;
+    return state.cart.items.length;
   },
 };

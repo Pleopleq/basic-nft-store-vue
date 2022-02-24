@@ -6,7 +6,7 @@ export default {
   namespace: true,
   state() {
     return {
-      cartProductList: [],
+      cart: { items: [], total: 0, qty: 0 },
     };
   },
   getters,

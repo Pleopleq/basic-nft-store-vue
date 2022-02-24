@@ -8,6 +8,7 @@
         :id="nft.id"
         :title="nft.title"
         :price="nft.price"
+        :currency="nft.currency"
         :img="nft.img"
       ></item-details>
     </base-card>

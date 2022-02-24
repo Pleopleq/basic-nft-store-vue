@@ -2,7 +2,7 @@
   <div class="card-content">
     <h2>{{ title }}</h2>
     <img :src="img" alt="Borpa" />
-    <h3>{{ price }}</h3>
+    <h3>{{ price }} {{ currency }}</h3>
     <div class="button-container">
       <button @click="onAddToCart" v-if="!isInCart">
         {{ addToCartTextBtn }}
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  props: ["title", "img", "price", "id"],
+  props: ["title", "img", "price", "id", "currency"],
   data() {
     return {
       isInCart: false,

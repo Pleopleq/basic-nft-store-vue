@@ -16,12 +16,7 @@
 
 <script>
 export default {
-  props: ["title", "img", "price", "id", "currency"],
-  data() {
-    return {
-      isInCart: false,
-    };
-  },
+  props: ["title", "img", "price", "id", "currency", "isInCart"],
   computed: {
     addToCartTextBtn() {
       if (this.isInCart) {
@@ -32,17 +27,20 @@ export default {
   },
   methods: {
     onAddToCart() {
-      this.isInCart = !this.isInCart;
       this.$store.dispatch("addProductToCart", {
         title: this.title,
         img: this.img,
         price: this.price,
         id: this.id,
+        isInCart: this.isInCart,
       });
+      this.isItemInCart();
     },
     onDeleteFromCart() {
-      this.isInCart = !this.isInCart;
       this.$store.dispatch("removeProductFromCart", this.id);
+    },
+    isItemInCart() {
+      this.$store.dispatch("isItemInCart", this.id);
     },
   },
 };

@@ -10,6 +10,7 @@
         :price="nft.price"
         :currency="nft.currency"
         :img="nft.img"
+        :isInCart="nft.isInCart"
       ></item-details>
     </base-card>
   </section>

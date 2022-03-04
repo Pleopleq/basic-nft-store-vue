@@ -14,8 +14,4 @@ export default {
     state.cart.qty -= 1;
     state.cart.total -= prodData.price;
   },
-  isItemInCart(state, id) {
-    const productInCart = state.cart.items.find((item) => item.id === id);
-    productInCart.isInCart = !productInCart.isInCart;
-  },
 };

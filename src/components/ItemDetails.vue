@@ -38,6 +38,7 @@ export default {
     },
     onDeleteFromCart() {
       this.$store.dispatch("removeProductFromCart", this.id);
+      this.isItemInCart();
     },
     isItemInCart() {
       this.$store.dispatch("isItemInCart", this.id);

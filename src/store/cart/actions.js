@@ -5,7 +5,4 @@ export default {
   removeProductFromCart(context, payload) {
     context.commit("removeProductFromCart", payload);
   },
-  isItemInCart(context, payload) {
-    context.commit("isItemInCart", payload);
-  },
 };

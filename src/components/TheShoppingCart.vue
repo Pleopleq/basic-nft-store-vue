@@ -24,11 +24,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      price: 0,
-    };
-  },
   computed: {
     cartItems() {
       return this.$store.getters.cartProductList;

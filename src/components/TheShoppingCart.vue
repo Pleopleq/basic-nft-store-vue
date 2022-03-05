@@ -5,22 +5,39 @@
       <h2>Items</h2>
     </div>
     <div class="cart-items">
-      <div v-for="items in cartItems" :key="items.id">
-        <h1>{{ items.title }}</h1>
+      <div v-for="item in cartItems" :key="item.id">
+        <base-cart-item>
+          <div class="cart-item">
+            <h1>{{ item.title }}</h1>
+            <img :src="item.img" alt="" />
+            <p>{{ item.price }} {{ item.currency }}</p>
+          </div></base-cart-item
+        >
       </div>
     </div>
     <div class="cart-info">
-      <p>Quantity: 0</p>
-      <p>Total: 0</p>
+      <p>Quantity: {{ itemsInCart }}</p>
+      <p>Total: {{ totalPrice }} ETH</p>
     </div>
   </section>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      price: 0,
+    };
+  },
   computed: {
     cartItems() {
       return this.$store.getters.cartProductList;
+    },
+    itemsInCart() {
+      return this.$store.getters.itemsInCart;
+    },
+    totalPrice() {
+      return Number(this.$store.getters.cartTotalPrice).toFixed(1);
     },
   },
 };
@@ -29,6 +46,10 @@ export default {
 <style scoped>
 .cart-title {
   text-align: center;
+}
+.cart-items {
+  display: flex;
+  justify-content: center;
 }
 .cart-container {
   height: 100vh;

@@ -31,6 +31,7 @@ export default {
         title: this.title,
         img: this.img,
         price: this.price,
+        currency: this.currency,
         id: this.id,
         isInCart: this.isInCart,
       });

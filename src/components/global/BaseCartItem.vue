@@ -8,8 +8,8 @@ export default {};
 
 <style scoped>
 .cart-item {
-  display: flex;
-  flex-flow: column;
+  margin-right: 10px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 25rem;

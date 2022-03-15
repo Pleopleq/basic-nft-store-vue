@@ -7,6 +7,10 @@ const routes = [
     redirect: "/items",
   },
   {
+    path: "/new-item",
+    component: "TheNewNftForm",
+  },
+  {
     path: "/items",
     component: TheItemList,
   },

@@ -5,6 +5,7 @@
     </div>
     <nav>
       <ul>
+        <li><router-link to="/items">Add a new NFT</router-link></li>
         <li><router-link to="/items">Items</router-link></li>
         <li>
           <router-link to="/cart">Cart {{ itemsInCart }} </router-link>
@@ -61,7 +62,7 @@ nav {
 ul {
   display: flex;
   justify-content: space-around;
-  width: 12rem;
+  width: 17rem;
   min-width: 2rem;
   padding: 0;
   list-style-type: none;

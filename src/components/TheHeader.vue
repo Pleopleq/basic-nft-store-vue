@@ -5,11 +5,11 @@
     </div>
     <nav>
       <ul>
-        <li><router-link to="/items">Add a new NFT</router-link></li>
         <li><router-link to="/items">Items</router-link></li>
         <li>
           <router-link to="/cart">Cart {{ itemsInCart }} </router-link>
         </li>
+        <li><router-link to="/new-item">Add a new NFT</router-link></li>
       </ul>
     </nav>
   </header>

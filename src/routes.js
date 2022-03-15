@@ -1,5 +1,6 @@
 import TheItemList from "./components/TheItemList.vue";
 import TheShoppingCart from "./components/TheShoppingCart.vue";
+import TheNewNftForm from "./components/TheNewNftForm.vue";
 
 const routes = [
   {
@@ -8,7 +9,7 @@ const routes = [
   },
   {
     path: "/new-item",
-    component: "TheNewNftForm",
+    component: TheNewNftForm,
   },
   {
     path: "/items",

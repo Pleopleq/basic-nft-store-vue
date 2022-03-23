@@ -8,7 +8,7 @@
   </section>
 
   <div class="carousel-buttons">
-    <button>prev</button>
+    <button @click="prev">prev</button>
     <button @click="next">next</button>
   </div>
 </template>
@@ -30,12 +30,20 @@ export default {
       const totalCards = this.$store.getters.itemsInCart;
       this.step = `${innerWidth / totalCards}px`;
     },
+    prev() {
+      this.moveRight();
+    },
     next() {
       this.moveLeft();
     },
     moveLeft() {
       this.innerStyles = {
         transform: `translateX(-${this.step})`,
+      };
+    },
+    moveRight() {
+      this.innerStyles = {
+        transform: `translateX(${this.step})`,
       };
     },
   },

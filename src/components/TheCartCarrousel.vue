@@ -27,12 +27,8 @@ export default {
   methods: {
     setStep() {
       const innerWidth = this.$refs.inner.scrollWidth;
-      console.log(innerWidth);
       const totalCards = this.$store.getters.itemsInCart;
-      console.log(totalCards);
       this.step = `${innerWidth / totalCards}px`;
-      console.log(`${innerWidth / totalCards}px`);
-      console.log(this.innerStyles);
     },
     next() {
       this.moveLeft();

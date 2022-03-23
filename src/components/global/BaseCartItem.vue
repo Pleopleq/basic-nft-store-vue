@@ -12,7 +12,7 @@ export default {};
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 25rem;
+  width: 19.5rem;
   border: 1px solid black;
 }
 </style>

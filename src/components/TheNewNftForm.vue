@@ -8,21 +8,18 @@
         </div>
         <div>
           <input type="text" class="form-input" v-model="name" />
-          {{ name }}
         </div>
         <div>
           <label for="image">Image</label>
         </div>
         <div>
           <input type="text" class="form-input" v-model="image" />
-          {{ image }}
         </div>
         <div>
           <label for="price">Price</label>
         </div>
         <div>
           <input type="number" class="form-input" v-model.number="price" />
-          {{ price }}
         </div>
         <div><button class="form-submit">Submit</button></div>
       </form>
@@ -56,7 +53,7 @@ export default {
       if (this.name === "" || this.image === "") {
         return (this.isInputsEmpty = true);
       }
-      if (this.price < 0) {
+      if (this.price <= 0) {
         return (this.isNegativeNumbers = true);
       }
 
